@@ -5,8 +5,9 @@ let started = false;
 let score = 0;
 let level = 0;
 let butn = ["red","green","pink","blue"];
+let lev = document.querySelector("#levels");
 
-document.addEventListener("keypress",()=>{
+lev.addEventListener("click",()=>{
    if(started == false){
       started =true;
       console.log("Game Started");
@@ -26,7 +27,7 @@ function levelup(){
    level++;
    l.innerText = `Level : ${level}`;
 
-   let a = Math.floor(Math.random()*4);
+   let a = Math.floor(Math.random() * 4);
    let colour = butn[a];
    let btn = document.querySelector(`.${colour}`);
    gameSeq.push(colour);
@@ -61,12 +62,14 @@ function clickFun(btn){
 function WrongPress(){
    started =false;
    let l = document.querySelector('p');
-   l.innerText = `Youre Score : ${score}. Press AnyKey to restart`;
+   l.innerText = `Youre Score : ${score}. Press Here to restart`;
    p=0;
    level =0;
    score =0;
    gameSeq =[];
 }
+
+
 
 
 
