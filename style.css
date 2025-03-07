@@ -96,3 +96,15 @@ p{
       margin-top: 8px;
    }
 }
+
+
+/* Removing blue Highlight */
+*{
+   -webkit-tap-highlight-color: transparent;
+}
+input, textarea,button,select,a{
+   -webkit-tap-highlight-color: transparent;
+}
+a:focus,a:visited,a:active{
+   outline: none;
+}
