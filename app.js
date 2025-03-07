@@ -37,8 +37,10 @@ function levelup(){
 let Allbtn = document.querySelectorAll(".btn");
 for(let i =0;i<Allbtn.length;i++){
    Allbtn[i].addEventListener("click",()=>{
-      btnFlash(Allbtn[i]);
-      clickFun(Allbtn[i]);
+      if(started==true){
+         btnFlash(Allbtn[i]);
+         clickFun(Allbtn[i]);
+      }
    });
 }
 let p =0;
